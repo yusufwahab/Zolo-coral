@@ -77,6 +77,7 @@ export function YorubaReader() {
   const [active, setActive] = useState(false);
   const [gate, setGate] = useState(false);
   const [box, setBox] = useState<DOMRect | null>(null);
+  const [typing, setTyping] = useState(false);
   const index = useRef(-1);
   const current = useRef<HTMLElement | null>(null);
   const clips = useRef<Set<string>>(new Set());
@@ -169,12 +170,32 @@ export function YorubaReader() {
   const press = useCallback(() => {
     const el = current.current;
     if (!el) return;
-    if (el instanceof HTMLInputElement || el instanceof HTMLSelectElement) el.focus();
-    else el.click();
+    if (el instanceof HTMLInputElement || el instanceof HTMLSelectElement) {
+      // Typing mode: the swipe layer steps aside so the keyboard and the field get the touches.
+      el.focus();
+      if (el instanceof HTMLSelectElement) el.showPicker?.();
+      setTyping(true);
+    } else el.click();
   }, []);
 
+  // Typing ends when the field loses focus (Enter, Escape, or a tap elsewhere).
   useEffect(() => {
-    if (!active) return;
+    const el = current.current;
+    if (!typing || !el) return;
+    const done = () => setTyping(false);
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Enter" || e.key === "Escape") el.blur();
+    };
+    el.addEventListener("blur", done);
+    el.addEventListener("keydown", onKey);
+    return () => {
+      el.removeEventListener("blur", done);
+      el.removeEventListener("keydown", onKey);
+    };
+  }, [typing]);
+
+  useEffect(() => {
+    if (!active || typing) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") focusAt(index.current + 1);
       else if (e.key === "ArrowLeft") focusAt(index.current - 1);
@@ -182,7 +203,7 @@ export function YorubaReader() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [active, focusAt, exit]);
+  }, [active, typing, focusAt, exit]);
 
   function accept() {
     write(DECIDED_KEY, "1");
@@ -241,7 +262,7 @@ export function YorubaReader() {
     <>
       <div
         data-reader-ignore
-        className="fixed inset-0 z-40 touch-none"
+        className={`fixed inset-0 z-40 touch-none ${typing ? "pointer-events-none" : ""}`}
         onPointerDown={(e) => (start.current = { x: e.clientX, y: e.clientY })}
         onPointerUp={(e) => {
           const s = start.current;

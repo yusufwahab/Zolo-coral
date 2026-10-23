@@ -111,6 +111,46 @@ test("a double tap presses the element the box is on", async ({ page }) => {
   await expect(page).toHaveURL(/\/pay\/code/);
 });
 
+test("a double tap on a field lets you type in it, then swiping comes back", async ({ page }) => {
+  await signInAsCustomer(page);
+  await page.getByRole("dialog").getByRole("button").first().click();
+  await expect(box(page)).toBeVisible({ timeout: 5000 });
+  // On to the code screen (its link, then a double tap).
+  const current = page.locator("[data-reader-current]");
+  for (let i = 0; i < 8 && (await current.getAttribute("href")) !== "/pay/code"; i++) {
+    await page.keyboard.press("ArrowRight");
+    await page.waitForTimeout(150);
+  }
+  await page.mouse.click(200, 300);
+  await page.mouse.click(200, 300);
+  await page.waitForURL("**/pay/code");
+
+  // Step to the code field and double tap it.
+  const field = page.locator("input");
+  for (
+    let i = 0;
+    i < 8 && !(await field.evaluate((el) => el.hasAttribute("data-reader-current")));
+    i++
+  ) {
+    await page.keyboard.press("ArrowRight");
+    await page.waitForTimeout(250);
+  }
+  await page.mouse.click(200, 300);
+  await page.mouse.click(200, 300);
+  await expect(field).toBeFocused();
+
+  // The swipe layer has stepped aside: a real tap reaches the field, and typing works.
+  await page.keyboard.type("4821");
+  await expect(field).toHaveValue("4821");
+
+  // Enter leaves the field; the reader is back and the arrow keys move again.
+  await page.keyboard.press("Enter");
+  await expect(field).not.toBeFocused();
+  const before = await box(page).boundingBox();
+  await page.keyboard.press("ArrowLeft");
+  await expect.poll(async () => (await box(page).boundingBox())?.y).not.toBe(before?.y);
+});
+
 test("the exit button (or Escape) stops the reader", async ({ page }) => {
   await signInAsCustomer(page);
   await page.getByRole("dialog").getByRole("button").first().click();
