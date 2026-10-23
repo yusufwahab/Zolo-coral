@@ -48,6 +48,13 @@ function textOf(el: HTMLElement): string {
   return el.textContent ?? "";
 }
 
+/** The separate lines of text inside an element, in order. */
+function leafTexts(el: HTMLElement): string[] {
+  return Array.from(el.querySelectorAll<HTMLElement>("*"))
+    .filter((n) => n.children.length === 0 && n.textContent?.trim())
+    .map((n) => n.textContent!);
+}
+
 /** What can be swiped to, in reading order: visible, not hidden, not inside another reader item. */
 function collect(): HTMLElement[] {
   const all = Array.from(
@@ -77,11 +84,20 @@ export function YorubaReader() {
   const lastTap = useRef(0);
   const start = useRef<{ x: number; y: number } | null>(null);
 
-  const play = useCallback((src: string) => {
+  /** Plays the clips one after another; a new swipe cuts the old ones short. */
+  const play = useCallback((...srcs: string[]) => {
     audio.current?.pause();
-    const a = new Audio(src);
-    audio.current = a;
-    void a.play().catch(() => undefined); // blocked until a tap: the next gesture plays it
+    const run = (queue: string[]) => {
+      const [src, ...rest] = queue;
+      if (!src) return;
+      const a = new Audio(src);
+      audio.current = a;
+      a.onended = () => {
+        if (audio.current === a) run(rest);
+      };
+      void a.play().catch(() => undefined); // blocked until a tap: the next gesture plays it
+    };
+    run(srcs);
   }, []);
 
   const focusAt = useCallback(
@@ -90,11 +106,16 @@ export function YorubaReader() {
       if (items.length === 0) return;
       index.current = Math.min(Math.max(i, 0), items.length - 1);
       const el = items[index.current]!;
+      current.current?.removeAttribute("data-reader-current");
       current.current = el;
+      el.setAttribute("data-reader-current", "");
       el.scrollIntoView({ block: "center", behavior: "smooth" });
       setBox(el.getBoundingClientRect());
-      const id = messageIdFor(textOf(el));
-      if (id && clips.current.has(id)) play(`${AUDIO}/${id}.mp3`);
+      // The whole text first; a card made of several lines ("Pay an agent" + its hint) is read line by line.
+      const whole = messageIdFor(textOf(el));
+      const ids = whole ? [whole] : leafTexts(el).map(messageIdFor);
+      const known = ids.filter((id): id is string => Boolean(id) && clips.current.has(id!));
+      if (known.length > 0) play(...known.map((id) => `${AUDIO}/${id}.mp3`));
       else audio.current?.pause();
     },
     [play],
