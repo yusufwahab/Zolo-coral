@@ -1,3 +1,4 @@
+import { YorubaReader } from "@/components/YorubaReader";
 import { LiveRegionProvider } from "@/components/ui/LiveRegion";
 
 /**
@@ -9,6 +10,7 @@ export default function AppLayout({ children }: Readonly<{ children: React.React
   return (
     <LiveRegionProvider>
       <div className="app-frame">{children}</div>
+      <YorubaReader />
     </LiveRegionProvider>
   );
 }

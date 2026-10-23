@@ -91,6 +91,7 @@ async function render(text) {
       method: "POST",
       headers: { ...auth, "Content-Type": "application/json", "Idempotency-Key": idem },
       body: JSON.stringify({ text, voice, output_format: "mp3", target_language: "yo" }),
+      signal: AbortSignal.timeout(30_000),
     });
     if (post.status !== 429) break;
     await sleep((Number(post.headers.get("retry-after")) || 5) * 1000); // rate limited: wait, then retry
@@ -103,13 +104,16 @@ async function render(text) {
 
   const deadline = Date.now() + JOB_TIMEOUT_MS;
   while (Date.now() < deadline) {
-    const status = await fetch(`${BASE_URL}/api/v1/status/${jobId}`, { headers: auth });
+    const status = await fetch(`${BASE_URL}/api/v1/status/${jobId}`, {
+      headers: auth,
+      signal: AbortSignal.timeout(30_000),
+    });
     if (status.status !== 200) throw new Error(`status check failed (HTTP ${status.status})`);
     const body = await status.json();
     if (body.status === "failed") throw new Error("tts job failed");
     if (body.audio_url) {
       // Signed link on another host: never send our API key to it.
-      const audio = await fetch(body.audio_url);
+      const audio = await fetch(body.audio_url, { signal: AbortSignal.timeout(30_000) });
       if (!audio.ok) throw new Error(`download failed (HTTP ${audio.status})`);
       return Buffer.from(await audio.arrayBuffer());
     }

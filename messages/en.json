@@ -327,5 +327,12 @@
     "failed": "The call did not work. Nothing was sent.",
     "usePasskey": "Use my passkey instead",
     "transcript": "What the call said"
+  },
+  "voice": {
+    "gatePrompt": "Do you want to continue in Yoruba? Tap the screen once to say yes. Swipe sideways to move to the next item. Double tap to choose it.",
+    "gateTitle": "Continue in Yoruba?",
+    "gateTap": "Tap the screen to say yes",
+    "gateNo": "No, stay in English",
+    "exit": "Stop voice reading"
   }
 }

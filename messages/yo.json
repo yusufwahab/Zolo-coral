@@ -185,5 +185,12 @@
   "language": {
     "label": "Èdè",
     "hint": "Èyí yí èdè àwọn ojú ìkànnì padà. Èdè Gẹ̀ẹ́sì tàbí Pidgin nìkan ni a fi ń sọ ìbéèrè náà ní báyìí."
+  },
+  "voice": {
+    "gatePrompt": "Ṣé o fẹ́ tẹ̀síwájú ní èdè Yorùbá? Tẹ ojú ìkànnì lẹ́ẹ̀kan láti gbà. Ra ọwọ́ rẹ sí ẹ̀gbẹ́ láti lọ sí ohun tó kàn. Tẹ̀ lẹ́ẹ̀mejì láti yàn án.",
+    "gateTitle": "Tẹ̀síwájú ní Yorùbá?",
+    "gateTap": "Tẹ ojú ìkànnì láti gbà",
+    "gateNo": "Rárá, máa lo èdè Gẹ̀ẹ́sì",
+    "exit": "Dá kíkà ohùn dúró"
   }
 }
