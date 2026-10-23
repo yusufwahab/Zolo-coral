@@ -1,0 +1,377 @@
+{
+  "common.tryAgain": {
+    "text": "Gbìyànjú lẹ́ẹ̀kan sí i",
+    "voice": "idera",
+    "hash": "6512844973a01ac3"
+  },
+  "common.verified": {
+    "text": "Báńkì ti ṣàyẹ̀wò rẹ̀",
+    "voice": "idera",
+    "hash": "9cef153320638eef"
+  },
+  "app.skip": {
+    "text": "Fo lọ sí àkóónú pàtàkì",
+    "voice": "idera",
+    "hash": "f5978103868a64d6"
+  },
+  "common.fifteenSeconds": {
+    "text": "Ìṣẹ́jú-àáyá mẹ́ẹ̀dógún ló kù.",
+    "voice": "idera",
+    "hash": "8bb7bcd183f6b2fc"
+  },
+  "errors.generic": {
+    "text": "Nǹkan kan ṣẹlẹ̀. A kò fi nǹkan kankan ránṣẹ́. Gbìyànjú lẹ́ẹ̀kan sí i.",
+    "voice": "idera",
+    "hash": "e9882e9e58753405"
+  },
+  "errors.network": {
+    "text": "Kò sí ìkànnì. A kò fi nǹkan kankan ránṣẹ́. Gbìyànjú lẹ́ẹ̀kan sí i.",
+    "voice": "idera",
+    "hash": "aecf66f3e03a5e3e"
+  },
+  "common.offline": {
+    "text": "Kò sí ìkànnì. À ń gbìyànjú lẹ́ẹ̀kan sí i.",
+    "voice": "idera",
+    "hash": "1d0196eec4f45ba5"
+  },
+  "signin.intro": {
+    "text": "Àpẹẹrẹ ni èyí. Yan ẹni tí o fẹ́ jẹ́.",
+    "voice": "idera",
+    "hash": "56062e2619eca2e1"
+  },
+  "errors.rateLimited": {
+    "text": "O ti gbìyànjú ní ìgbà púpọ̀. Dúró fún ìṣẹ́jú kan, kí o tún gbìyànjú.",
+    "voice": "idera",
+    "hash": "7d40432dedafc88a"
+  },
+  "signin.failed": {
+    "text": "A kò lè wọlé. Gbìyànjú lẹ́ẹ̀kan sí i.",
+    "voice": "idera",
+    "hash": "f2eb93c9664cb60c"
+  },
+  "home.payAgentHint": {
+    "text": "Tẹ kóòdù oní-nọ́ńbà mẹ́rin tí aṣojú fún ọ",
+    "voice": "idera",
+    "hash": "1ce09a8f3aaa7eff"
+  },
+  "home.recentEmptyHint": {
+    "text": "Àwọn ìsanwó tí o bá fọwọ́ sí yóò hàn níbí.",
+    "voice": "idera",
+    "hash": "40abaaae55657a24"
+  },
+  "pay.label": {
+    "text": "Kóòdù oní-nọ́ńbà mẹ́rin ti aṣojú",
+    "voice": "idera",
+    "hash": "a65b29ed4f17f049"
+  },
+  "pay.hint": {
+    "text": "Bi aṣojú láti kà àwọn nọ́ńbà mẹ́rin tó wà lórí ìkànnì rẹ̀ fún ọ.",
+    "voice": "idera",
+    "hash": "61dedd67efbf29a5"
+  },
+  "pay.notFound": {
+    "text": "Kò sí ìbéèrè tó ní kóòdù yìí. Ṣàyẹ̀wò nọ́ńbà mẹ́rin náà pẹ̀lú aṣojú.",
+    "voice": "idera",
+    "hash": "248777e38f8943e4"
+  },
+  "pay.expired": {
+    "text": "Kóòdù yìí ti parí. Bi aṣojú fún tuntun.",
+    "voice": "idera",
+    "hash": "5ab5f065b0217d91"
+  },
+  "review.bank": {
+    "text": "Ìsanwó sí àkọọ́lẹ̀ Zenith Bank",
+    "voice": "idera",
+    "hash": "900eaa8aa82ff18a"
+  },
+  "review.audioBlocked": {
+    "text": "Tẹ̀ láti gbọ́ ìbéèrè náà.",
+    "voice": "idera",
+    "hash": "5e7bb0547caba5d4"
+  },
+  "review.modeReader": {
+    "text": "Lo ẹ̀rọ kíkà ìkànnì mi nìkan",
+    "voice": "idera",
+    "hash": "7d5d81a650aa334f"
+  },
+  "review.modeReaderNow": {
+    "text": "Ẹ̀rọ kíkà ìkànnì nìkan. Zolo kò ní sọ̀rọ̀.",
+    "voice": "idera",
+    "hash": "b1571458f9690e09"
+  },
+  "review.englishNote": {
+    "text": "Èdè Gẹ̀ẹ́sì ni a fi ń sọ ìbéèrè náà fún ọ ní báyìí.",
+    "voice": "idera",
+    "hash": "eb438ae8ecd893b0"
+  },
+  "review.askPasskey": {
+    "text": "Lo ìka ọwọ́, ojú tàbí ìdè ẹ̀rọ rẹ.",
+    "voice": "idera",
+    "hash": "523a29fff88215c2"
+  },
+  "review.declined": {
+    "text": "O kọ̀. A kò fi nǹkan kankan ránṣẹ́.",
+    "voice": "idera",
+    "hash": "e7a9062b0df53065"
+  },
+  "review.cancelled": {
+    "text": "O fagilé e. A kò fi nǹkan kankan ránṣẹ́. O lè tún gbìyànjú.",
+    "voice": "idera",
+    "hash": "35fd8760eedcd9f8"
+  },
+  "review.notYou": {
+    "text": "A kò lè jẹ́rìí pé ìwọ ni. A kò fi nǹkan kankan ránṣẹ́. Gbìyànjú lẹ́ẹ̀kan sí i.",
+    "voice": "idera",
+    "hash": "6ccfbff122abc398"
+  },
+  "result.declined": {
+    "text": "O kọ̀. A kò fi nǹkan kankan ránṣẹ́.",
+    "voice": "idera",
+    "hash": "e7a9062b0df53065"
+  },
+  "result.paidBody": {
+    "text": "Owó náà ti kúrò nínú àkọọ́lẹ̀ rẹ.",
+    "voice": "idera",
+    "hash": "f8234d6a3a5b3d46"
+  },
+  "result.expired": {
+    "text": "Ìbéèrè yìí ti parí. A kò fi nǹkan kankan ránṣẹ́.",
+    "voice": "idera",
+    "hash": "33e3e9053fec6ca6"
+  },
+  "result.declinedBody": {
+    "text": "O sọ pé rárá, nítorí náà owó kò lọ.",
+    "voice": "idera",
+    "hash": "09b9b53eda5ba1db"
+  },
+  "result.expiredBody": {
+    "text": "Bi aṣojú fún kóòdù tuntun.",
+    "voice": "idera",
+    "hash": "a6a11e83dbf62e0f"
+  },
+  "result.changed": {
+    "text": "Ìsanwó yìí yípadà lẹ́yìn tí o gbọ́ ọ. A kò fi nǹkan kankan ránṣẹ́.",
+    "voice": "idera",
+    "hash": "e934d522f6019402"
+  },
+  "result.failed": {
+    "text": "Ìsanwó náà kò lọ. A kò fi nǹkan kankan ránṣẹ́.",
+    "voice": "idera",
+    "hash": "cc2aebcd97f5c413"
+  },
+  "result.changedBody": {
+    "text": "Má ṣe san án. Sọ fún aṣojú kí ó bẹ̀rẹ̀ lẹ́ẹ̀kan sí i.",
+    "voice": "idera",
+    "hash": "0dcba0f4248ba393"
+  },
+  "result.limit": {
+    "text": "Èyí ti kọjá ààlà rẹ. A kò fi nǹkan kankan ránṣẹ́.",
+    "voice": "idera",
+    "hash": "d98e8fd815fd0892"
+  },
+  "result.failedBody": {
+    "text": "Owó rẹ wà ní ààbò. O lè tún gbìyànjú.",
+    "voice": "idera",
+    "hash": "83370d9a15ca1cf5"
+  },
+  "result.blockedBody": {
+    "text": "Bá báńkì sọ̀rọ̀ tí o bá rò pé àṣìṣe wà.",
+    "voice": "idera",
+    "hash": "c943fb7d40972641"
+  },
+  "result.blocked": {
+    "text": "A dá ìsanwó yìí dúró láti dáàbò bo owó rẹ. A kò fi nǹkan kankan ránṣẹ́.",
+    "voice": "idera",
+    "hash": "32c735784cd22374"
+  },
+  "passkey.what": {
+    "text": "Passkey jẹ́ kí o lè fọwọ́ sí ìsanwó pẹ̀lú ìka ọwọ́, ojú tàbí ìdè ẹ̀rọ rẹ.",
+    "voice": "idera",
+    "hash": "c259133edd39447f"
+  },
+  "result.checking": {
+    "text": "À ń ṣàyẹ̀wò ohun tó ṣẹlẹ̀. Jọ̀wọ́ dúró.",
+    "voice": "idera",
+    "hash": "55a88112a78814d3"
+  },
+  "passkey.private": {
+    "text": "Ṣètò ìdè ẹ̀rọ rẹ níbi tí ẹnikẹ́ni kò ti rí ọ. Lo ẹ̀rọ ìgbọ́ràn tí o bá lè.",
+    "voice": "idera",
+    "hash": "2db0bccec552aea4"
+  },
+  "passkey.cancelled": {
+    "text": "O fagilé e. O lè tún gbìyànjú.",
+    "voice": "idera",
+    "hash": "b0164e057f75cfb9"
+  },
+  "passkey.needBody": {
+    "text": "O ń fọwọ́ sí ìsanwó pẹ̀lú ìka ọwọ́, ojú tàbí ìdè ẹ̀rọ rẹ. Ó máa gba ìṣẹ́jú-àáyá díẹ̀, lẹ́yìn náà o máa padà síbí lẹ́sẹ̀kẹsẹ̀.",
+    "voice": "idera",
+    "hash": "7ab172e2e3c5429c"
+  },
+  "agent.backspace": {
+    "text": "Pa nọ́ńbà tó gbẹ̀yìn rẹ́",
+    "voice": "idera",
+    "hash": "c8bbb6cc632ee990"
+  },
+  "agent.failed": {
+    "text": "Ìsanwó náà kò lọ. Owó kò kúrò.",
+    "voice": "idera",
+    "hash": "b04603194f0155ad"
+  },
+  "agent.codeAloud": {
+    "text": "Ka kóòdù yìí sókè fún oníbàárà.",
+    "voice": "idera",
+    "hash": "cfa1224bf19cfdf9"
+  },
+  "agent.waitForPaid": {
+    "text": "Fún owó nìkan lẹ́yìn tí o bá rí A ti san án.",
+    "voice": "idera",
+    "hash": "4241aa5ebef2e43f"
+  },
+  "agent.qrHidden": {
+    "text": "Kóòdù QR fún kámẹ́rà oníbàárà wà níbí.",
+    "voice": "idera",
+    "hash": "71e4ba8a69a0a57d"
+  },
+  "agent.processing": {
+    "text": "À ń ṣe é lọ́wọ́. Má ṣe fún ẹnikẹ́ni ní ẹrù rẹ̀ sibẹ̀.",
+    "voice": "idera",
+    "hash": "534e70c4a1f94113"
+  },
+  "agent.stateReviewing": {
+    "text": "Oníbàárà ń gbọ́ ìbéèrè náà.",
+    "voice": "idera",
+    "hash": "346b273464774517"
+  },
+  "agent.processingBody": {
+    "text": "Oníbàárà ti fọwọ́ sí i. Báńkì kò tíì jẹ́rìí rẹ̀. Dúró de A ti san án.",
+    "voice": "idera",
+    "hash": "1f4e13be5a251ac1"
+  },
+  "agent.declined": {
+    "text": "Oníbàárà sọ pé rárá. Owó kò kúrò.",
+    "voice": "idera",
+    "hash": "661c6dc1319d5d95"
+  },
+  "agent.noCode": {
+    "text": "Kóòdù náà kò sí lórí ojú ìkànnì yìí mọ́. Ṣe ìbéèrè tuntun.",
+    "voice": "idera",
+    "hash": "75f44ea8b3682f4d"
+  },
+  "agent.expired": {
+    "text": "Ìbéèrè yìí ti parí. Owó kò kúrò.",
+    "voice": "idera",
+    "hash": "606dbbbbe9c9c3f5"
+  },
+  "language.hint": {
+    "text": "Èyí yí èdè àwọn ojú ìkànnì padà. Èdè Gẹ̀ẹ́sì tàbí Pidgin nìkan ni a fi ń sọ ìbéèrè náà ní báyìí.",
+    "voice": "idera",
+    "hash": "382c51901b6c11f5"
+  },
+  "result.rejected": {
+    "text": "Báńkì kò gba ìsanwó yìí. A kò fi nǹkan kankan ránṣẹ́.",
+    "voice": "idera",
+    "hash": "066bf05d24367a35"
+  },
+  "result.processing": {
+    "text": "À ń ṣe é lọ́wọ́. Má ṣe fún ẹnikẹ́ni ní ẹrù rẹ̀ sibẹ̀.",
+    "voice": "idera",
+    "hash": "534e70c4a1f94113"
+  },
+  "passkey.doneReplaced": {
+    "text": "Passkey rẹ ti ṣetán. Ó ti rọ́pò èyí àtijọ́.",
+    "voice": "idera",
+    "hash": "31c3e776e2a8d757"
+  },
+  "passkey.never": {
+    "text": "Zolo kì í béèrè PIN rẹ tàbí nọ́ńbà káàdì rẹ láé.",
+    "voice": "idera",
+    "hash": "6a8ed56d976b117a"
+  },
+  "passkey.already": {
+    "text": "Fóònù yìí ti ní passkey rẹ.",
+    "voice": "idera",
+    "hash": "5308ad25c4fc6c98"
+  },
+  "passkey.unsupported": {
+    "text": "Ẹ̀rọ aṣàwákiri yìí kò lè lo passkey. Ṣí Zolo nínú Chrome tàbí Safari.",
+    "voice": "idera",
+    "hash": "c9f2dbd1b5146c49"
+  },
+  "passkey.noLock": {
+    "text": "Fóònù yìí kò ní ìdè ẹ̀rọ tí a lè lò. Tan ìka ọwọ́, ojú tàbí ìdè ẹ̀rọ nínú ètò fóònù rẹ, lẹ́yìn náà padà wá.",
+    "voice": "idera",
+    "hash": "95dd668173ac4998"
+  },
+  "passkey.failed": {
+    "text": "A kò lè ṣètò passkey rẹ. Gbìyànjú lẹ́ẹ̀kan sí i.",
+    "voice": "idera",
+    "hash": "54ebb2fcc8a0f821"
+  },
+  "passkey.statusOn": {
+    "text": "A ti ṣètò rẹ̀ lórí fóònù yìí",
+    "voice": "idera",
+    "hash": "fcade323c157e44d"
+  },
+  "pay.checking": {
+    "text": "À ń ṣàyẹ̀wò kóòdù náà",
+    "voice": "idera",
+    "hash": "cdb4447c04f7d12d"
+  },
+  "home.recentEmpty": {
+    "text": "Kò tíì sí ìsanwó kankan.",
+    "voice": "idera",
+    "hash": "7989227c22e39121"
+  },
+  "review.approveBusy": {
+    "text": "À ń ṣàyẹ̀wò pé ìwọ ni",
+    "voice": "idera",
+    "hash": "a3a20d4df10f2f0a"
+  },
+  "home.recent": {
+    "text": "Àwọn ìsanwó àìpẹ́ yìí",
+    "voice": "idera",
+    "hash": "9c2c789abc5557cf"
+  },
+  "review.loading": {
+    "text": "À ń mú ìbéèrè náà wá",
+    "voice": "idera",
+    "hash": "115f4985827d34cc"
+  },
+  "review.approveWait": {
+    "text": "Kọ́kọ́ gbọ́ ìbéèrè náà.",
+    "voice": "idera",
+    "hash": "da4fe56d71d1bc9d"
+  },
+  "review.noPasskey": {
+    "text": "O nílò passkey kọ́kọ́.",
+    "voice": "idera",
+    "hash": "fe51e7c10817bf47"
+  },
+  "review.modeZoloNow": {
+    "text": "Ohùn Zolo wà ní títàn.",
+    "voice": "idera",
+    "hash": "0e39ece0fd2ae1f9"
+  },
+  "review.unavailable": {
+    "text": "Ìbéèrè yìí kò sí mọ́.",
+    "voice": "idera",
+    "hash": "3c6dc536252826f3"
+  },
+  "result.limitBody": {
+    "text": "Béèrè fún iye tó kéré jù.",
+    "voice": "idera",
+    "hash": "a338122bcf616d91"
+  },
+  "passkey.done": {
+    "text": "Passkey rẹ ti ṣetán.",
+    "voice": "idera",
+    "hash": "3765a47c18c7f7e7"
+  },
+  "passkey.working": {
+    "text": "À ń dúró de fóònù rẹ",
+    "voice": "idera",
+    "hash": "d0ac18da5bb3d2cd"
+  }
+}
